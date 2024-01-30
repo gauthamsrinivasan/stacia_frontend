@@ -1,0 +1,75 @@
+.user-info_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  input {
+    width: 100%;
+    padding: 12px 10px;
+    font-weight: 500;
+    border: 1px solid #bbb;
+    outline: none;
+    border-radius: 10px;
+  }
+  input:focus {
+    border: 1px solid black;
+  }
+}
+.user-info_container h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.shipping-address_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  --gap: 20px;
+  gap: var(--gap);
+}
+
+#firstname,
+#lastname {
+  width: calc(50% - calc(var(--gap) / 2));
+}
+.checkout-btn {
+  width: 90%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.4rem;
+  text-align: center;
+  
+}
+.verify-btn {
+  width: 50%;
+  padding: 10px;
+  background-color: rgb(58, 54, 54);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.4rem;
+  justify-content: center;
+  margin: 0 auto;
+ 
+  margin: 10px 25%;
+  
+}
+.verify-btn:not([disabled]):hover {
+  background-color: #f84f4f;
+}
+.verify-btn[disabled] {
+  opacity: 0.5; 
+  cursor: not-allowed;
+}
+.checkout-btn[disabled] {
+  opacity: 0.5; 
+  cursor: not-allowed;
+}
+.checkout-btn:hover {
+  background-color: #303030;
+}
