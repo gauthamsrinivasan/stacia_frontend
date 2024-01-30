@@ -47,7 +47,7 @@ function ShippingAddress( {verify,updateVerify}) {
 
   const generateToken = async () => {
     try {
-      const response = await axios.get( "http://localhost:5000/api/braintree/v1/getToken");
+      const response = await axios.get( "https://stacia-backend.vercel.app/api/braintree/v1/getToken");
       const clientToken = response.data.clientToken;
       setClientToken(clientToken);
     } catch (error) {
@@ -74,7 +74,7 @@ function ShippingAddress( {verify,updateVerify}) {
       console.log("check nonce : " + paymentMethodNonce  );
       console.log("totalprice : " + totalPrice.toFixed(2));
       const response = await axios.post(
-        "http://localhost:5000/api/braintree/v1/sandbox",
+        "https://stacia-backend.vercel.app/api/braintree/v1/sandbox",
         { paymentMethodNonce: paymentMethodNonce, amount: totalPrice.toFixed(2) }
       );
       console.log(response);

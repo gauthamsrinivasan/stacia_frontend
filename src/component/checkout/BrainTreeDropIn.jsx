@@ -16,7 +16,7 @@ const BraintreeDropin = ({ onPaymentMethodReceived, updateVerify }) => {
     const getClientToken = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/braintree/v1/getToken"
+          "https://stacia-backend.vercel.app/api/braintree/v1/getToken"
         );
         const clientToken = response.data.clientToken;
         setClientToken(clientToken);
