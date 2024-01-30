@@ -79,7 +79,7 @@ function ShippingAddress( {verify,updateVerify}) {
       );
       console.log(response);
       if (response.data.success) {
-        toast.success("Amount Debited : $" + totalPrice);
+        toast.success("Amount Debited : $" + totalPrice.toFixed(2));
         
         emptyCart();
         toast.success("Checked out");

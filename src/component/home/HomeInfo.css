@@ -40,6 +40,13 @@
     }
   }
 }
+a{
+  font-weight: 700;
+}
+a:hover{
+  text-decoration: underline;
+  color: chocolate;
+}
 @media (max-width: 800px) {
   .home-info {
     width: 90% !important;
